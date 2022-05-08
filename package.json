@@ -1,0 +1,12 @@
+{
+  "license": "MIT",
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "scripts": {
+    "html": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true  --input-dir src --output-dir docs --file-ext html",
+    "css": "tailwindcss -i ./src/styles.css -o ./docs/styles.css -m",
+    "build": "npm run html && npm run css"
+  }
+}
